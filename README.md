@@ -84,3 +84,47 @@ claimsense-ai/
 ├── package-lock.json
 ├── vite.config.js
 └── README.md
+## How to Run
+
+### Before Starting
+
+Checklist:
+
+- [ ] MongoDB Atlas cluster is running
+- [ ] Current IP address is allowed in MongoDB Atlas
+- [ ] Database connection configuration is correct
+- [ ] Backend dependencies are installed
+- [ ] Frontend dependencies are installed
+
+---
+
+### Terminal 1 — Frontend
+
+```powershell
+cd C:\Users\madhu\OneDrive\Desktop\claimsense-ai
+npm run dev
+
+Frontend will run at:
+
+http://localhost:5173
+Terminal 2 — Backend
+cd C:\Users\madhu\OneDrive\Desktop\claimsense-ai\backend
+python -m uvicorn main:app --reload
+
+Backend will run at:
+
+http://127.0.0.1:8000
+
+Swagger API documentation:
+
+http://127.0.0.1:8000/docs
+If MongoDB Connection Fails
+
+Check MongoDB Atlas:
+
+ Cluster is running
+ Current IP address is added
+ Database username/password are correct
+ MongoDB connection string is correct
+
+Then restart the backend.
